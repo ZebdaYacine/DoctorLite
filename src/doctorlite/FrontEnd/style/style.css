@@ -1,0 +1,66 @@
+.button
+{
+    -fx-background-color : transparent;
+}
+
+.back
+{
+    /*-fx-background-color : #E9EBEE;*/
+    -fx-background-color : #0d1a27;
+}
+
+.pantable
+{
+    -fx-background-color : #0d1a27;
+    -fx-text-fill: white;
+}
+
+.home
+{ 
+    /*-fx-background-color : white;*/
+    -fx-background-color : #203243;
+}
+
+
+.menu-item .label {
+    -fx-background-color : transparent; 
+    -fx-text-fill: white;
+}
+
+
+.context-menu .label{
+    -fx-text-fill: black;
+}
+
+.combo-box .cell {
+     -fx-text-fill: white;
+}
+
+.combo-box {
+   -fx-focus-color: #0077cc;
+   -fx-faint-focus-color: #0d1a27;
+   -fx-control-inner-background: #0d1a27;
+   -fx-selection-bar: #0099cc;
+}
+
+
+.labels_err
+{
+    -fx-text-fill: f70d1b;
+}
+
+.jfxtextfield{
+    -fx-prompt-text-fill: white;
+    -fx-text-inner-color: white;
+}
+
+.img
+{
+    -fx-background-color : #ffffff;
+}
+
+.textArea
+{
+    -fx-highlight-fill:#000;
+    -fx-background-color : #000;
+}

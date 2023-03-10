@@ -1,0 +1,82 @@
+.addbtn
+{
+    -fx-background-color: linear-gradient( #0d1a27 85%, #20c700 100%);
+    -fx-text-fill: white;
+}
+
+.addbtn:hover
+{
+    -fx-background-color :  linear-gradient( #0d1a27 45%, #20c700 100%);
+    -fx-text-fill: white;
+
+}
+
+.delbtn
+{
+    -fx-background-color: linear-gradient( #0d1a27 85%, #ff3313 100%);
+    -fx-text-fill: white;
+}
+
+.delbtn:hover 
+{
+    -fx-background-color :  linear-gradient( #0d1a27 45%, #ff3313 100%);
+    -fx-text-fill: white;
+}
+
+.upbtn
+{
+    -fx-background-color: linear-gradient( #0d1a27 85%, #fc8b18 100%);
+    -fx-text-fill: white;
+}
+
+.upbtn:hover 
+{
+    -fx-background-color :  linear-gradient( #0d1a27 45%, #fc8b18 100%);
+    -fx-text-fill: white;
+}
+
+.gbtn
+{
+    -fx-background-color : transparent;
+    -fx-border-color: #192734;
+}
+
+.gbtn:hover
+{
+    -fx-border-color: white;
+}
+
+.printbtn
+{
+    -fx-background-color :  linear-gradient( #0d1a27 90%, #0099cc 100%);
+    -fx-text-fill: white;
+}
+
+.printbtn:hover
+{
+    -fx-background-color :  #0099cc;
+}
+
+.logbtn
+{
+    -fx-background-color :  #0099cc;
+    -fx-text-fill: white;
+}
+
+.logbtn:hover
+{
+    -fx-background-color :  #0077cc;
+}
+
+.mainbtn
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0
+}
+
+.mainbtn:hover
+{
+    -fx-padding: 0
+}

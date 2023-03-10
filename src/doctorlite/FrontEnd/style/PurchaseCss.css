@@ -1,0 +1,13 @@
+.pane_textfield {
+    -fx-border-color: transparent;
+}
+.pane_MontentTotal {
+    -fx-border-color: #ffffff;
+}
+.pane_Payment {
+    -fx-border-color: #1dbf1d;
+}
+
+.label_priceT{
+    -fx-text-fill: #1dbf1d;
+}

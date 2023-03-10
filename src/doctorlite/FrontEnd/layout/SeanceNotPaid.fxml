@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="643.0" prefWidth="740.0" styleClass="home" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctorlite.BackEnd.Controller.SeanceNotPaidController">
+    <children>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="180.0" prefHeight="30.0" prefWidth="727.0" styleClass="pantable" stylesheets="@../style/style.css" text="قائمة الحصص الغير مدفوعة" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="seanceTable" layoutX="6.0" layoutY="199.0" onMouseClicked="#selectItem" prefHeight="431.0" prefWidth="727.0" stylesheets="@../style/Table_Gestion_Css.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="210.0">
+         <columns>
+            <TableColumn fx:id="roomC" prefWidth="131.0" text="القاعة" />
+            <TableColumn fx:id="dateTimeC" prefWidth="177.0" text="التوقيت" />
+            <TableColumn fx:id="teacherC" prefWidth="130.0" text="الأستاذ" />
+            <TableColumn fx:id="pTeacherC" prefWidth="161.0" text="حضور الأستاذ" />
+            <TableColumn fx:id="pStudentC" prefWidth="94.0" text="حضور التلميذ" />
+         </columns>
+      </TableView>
+      <Label fx:id="idL" layoutX="23.0" layoutY="35.0" prefHeight="34.0" prefWidth="250.0" text="التلميذ:" textAlignment="JUSTIFY" textFill="#ff1313" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Arial Narrow" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="idL1" layoutX="24.0" layoutY="107.0" prefHeight="34.0" prefWidth="250.0" text="الفوج:" textAlignment="JUSTIFY" textFill="#ff0606" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Arial Narrow" size="25.0" />
+         </font>
+      </Label>
+        <!--<<<<<<< HEAD-->
+        <!--      <JFXComboBox fx:id="sectionName" focusColor="#0077cc" layoutX="30.0" layoutY="198.0" prefHeight="25.0" prefWidth="200.0" promptText="Section" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" />-->
+        <!--=======-->
+        <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+    </children>
+</AnchorPane>

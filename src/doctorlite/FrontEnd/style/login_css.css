@@ -1,0 +1,21 @@
+.button 
+{
+    -fx-background-color : #326df0;
+    -fx-text-fill: #ffffff
+}
+
+
+.textfield
+{
+    -fx-text-inner-color: #ffffff;
+    -fx-prompt-text-fill: #ffffff;
+}
+
+.home
+{
+    -fx-background-color : #f9f9f9;
+}
+.button:hover
+{
+    -fx-background-color :  #5489ff;
+}

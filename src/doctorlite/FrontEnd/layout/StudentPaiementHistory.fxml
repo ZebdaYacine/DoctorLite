@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="RIGHT_TO_LEFT" prefHeight="502.0" prefWidth="800.0" styleClass="home" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctorlite.BackEnd.Controller.StudentPaiementHistoryController">
+   <children>
+      <Label fx:id="stdLbl" layoutX="19.0" layoutY="12.0" prefHeight="50.0" prefWidth="378.0" text="التلميذ:" textFill="RED" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Candara" size="26.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="15.0" layoutY="68.0" prefHeight="34.0" prefWidth="760.0" styleClass="pantable" stylesheets="@../style/style.css" text="سجل الدفع" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="studentTable" layoutX="16.0" layoutY="108.0" prefHeight="383.0" prefWidth="760.0" stylesheets="@../style/Table_Gestion_Css.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0">
+         <columns>
+            <TableColumn fx:id="offerC" prefWidth="140.0" text="العرض" />
+            <TableColumn fx:id="groupC" prefWidth="135.0" text="الفوج" />
+            <TableColumn fx:id="datePC" prefWidth="209.0" text="تاريخ الدفع" />
+            <TableColumn fx:id="amountC" prefWidth="129.0" text="المبلغ" />
+            <TableColumn fx:id="amountRC" prefWidth="141.0" text=" المبلغ المتبقي" />
+         </columns>
+      </TableView>
+<!--<<<<<<< HEAD-->
+<!--      <JFXComboBox fx:id="sectionName" focusColor="#0077cc" layoutX="30.0" layoutY="198.0" prefHeight="25.0" prefWidth="200.0" promptText="Section" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" />-->
+<!--=======-->
+<!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" onKeyReleased="#hotkey" pickOnBounds="false" prefHeight="585.0" prefWidth="400.0" styleClass="home" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctorlite.BackEnd.Controller.NewPaiementController">
+    <children>
+      <GridPane alignment="TOP_CENTER" layoutX="17.0" layoutY="14.0" prefHeight="567.0" prefWidth="372.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+              <JFXTextField fx:id="fullName" focusColor="#0077cc" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="360.0" promptText="الإسم و اللقب" styleClass="jfxtextfield" unFocusColor="#0099cc" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <font>
+                      <Font name="Times New Roman" size="14.0" />
+                  </font>
+              </JFXTextField>
+              <JFXTextField fx:id="amount" editable="false" focusColor="#0077cc" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="360.0" promptText="مبلغ  الدورة" styleClass="jfxtextfield" unFocusColor="#0099cc" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                  <font>
+                      <Font name="Times New Roman" size="14.0" />
+                  </font>
+              </JFXTextField>
+              <JFXTextField fx:id="amountP" focusColor="#0077cc" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="360.0" promptText="المبلغ المدفوع" styleClass="jfxtextfield" unFocusColor="#0099cc" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                  <font>
+                      <Font name="Times New Roman" size="14.0" />
+                  </font>
+              </JFXTextField>
+            <GridPane GridPane.rowIndex="6">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                    <!--<<<<<<< HEAD-->
+                    <!--      <JFXButton buttonType="RAISED" layoutX="300.0" layoutY="200.0" onAction="#add" prefHeight="27.0" prefWidth="120.0" styleClass="addbtn" stylesheets="@../Style/buttons_style.css" text="Ajouter">-->
+                    <!--=======-->
+                    <JFXButton fx:id="add" nodeOrientation="LEFT_TO_RIGHT" onAction="#add" prefHeight="44.0" prefWidth="175.0" styleClass="addbtn" stylesheets="@../style/buttons_style.css" text="إضافة" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                        <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+                        <font>
+                            <Font name="Times New Roman" size="14.0" />
+                        </font>
+                        <graphic>
+                            <!--<<<<<<< HEAD-->
+                            <!--            <MaterialDesignIconView glyphName="ACCOUNT_PLUS" size="16" />-->
+                            <!--         </graphic>-->
+                            <!--      </JFXButton>-->
+                            <!--      <JFXButton fx:id="update" buttonType="RAISED" layoutX="450.0" layoutY="200.0" onAction="#update" prefWidth="120.0" styleClass="upbtn" stylesheets="@../Style/buttons_style.css" text="Modifier">-->
+                            <!--=======-->
+                            <MaterialDesignIconView fill="WHITE" glyphName="PLUS" size="18" />
+                        </graphic>
+                    </JFXButton>
+               </children>
+            </GridPane>
+            <ProgressIndicator fx:id="prg" progress="0.0" visible="false" GridPane.rowIndex="4" />
+            <JFXComboBox fx:id="GroupCmb" focusColor="#0077cc" labelFloat="true" onAction="#onchangecontent" prefHeight="30.0" prefWidth="360.0" promptText="الفوج" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="OfferN" focusColor="#0077cc" labelFloat="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="360.0" promptText="العرض" styleClass="jfxtextfield" unFocusColor="#0099cc" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="aroundCmb1" focusColor="#0077cc" labelFloat="true" layoutX="16.0" layoutY="102.0" prefHeight="30.0" prefWidth="360.0" promptText="الدورة" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+        <!--<<<<<<< HEAD-->
+        <!--      <JFXComboBox fx:id="sectionName" focusColor="#0077cc" layoutX="30.0" layoutY="198.0" prefHeight="25.0" prefWidth="200.0" promptText="Section" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" />-->
+        <!--=======-->
+        <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+    </children>
+</AnchorPane>

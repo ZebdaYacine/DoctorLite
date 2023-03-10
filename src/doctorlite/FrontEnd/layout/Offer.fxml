@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="RIGHT_TO_LEFT" onKeyReleased="#hotkey" prefHeight="650.0" prefWidth="1340.0" styleClass="home" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctorlite.BackEnd.Controller.OfferController">
+    <children>
+        <!--<<<<<<< HEAD-->
+        <JFXTextField fx:id="name" focusColor="#0077cc" labelFloat="true" layoutX="31.0" layoutY="50.0" onKeyReleased="#search" prefHeight="30.0" prefWidth="200.0" promptText="إسم العرض" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+        </JFXTextField>
+        <Label fx:id="nameErr" layoutX="30.0" layoutY="87.0" styleClass="labels_err" stylesheets="@../style/style.css" textFill="#cc3300" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="55.0">
+
+            <!--=======-->
+            <!--      <JFXTextField fx:id="firstName" focusColor="#0077cc" labelFloat="true" layoutX="30.0" layoutY="30.0" prefHeight="30.0" prefWidth="200.0" promptText="Nom" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc">-->
+            <!--         <font>-->
+            <!--            <Font name="Times New Roman" size="14.0" />-->
+            <!--         </font></JFXTextField>-->
+            <!--      <JFXTextField fx:id="phone1" focusColor="#0077cc" labelFloat="true" layoutX="500.0" layoutY="30.0" prefHeight="30.0" prefWidth="200.0" promptText="N°  Télephone 1 " styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc">-->
+            <!--         <font>-->
+            <!--            <Font name="Times New Roman" size="14.0" />-->
+            <!--         </font></JFXTextField>-->
+            <!--      <JFXTextField fx:id="lastName" focusColor="#0077cc" labelFloat="true" layoutX="30.0" layoutY="110.0" prefHeight="30.0" prefWidth="200.0" promptText="Prenom" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc">-->
+            <!--         <font>-->
+            <!--            <Font name="Times New Roman" size="14.0" />-->
+            <!--         </font></JFXTextField>-->
+            <!--      <JFXTextField fx:id="phone2" focusColor="#0077cc" labelFloat="true" layoutX="500.0" layoutY="110.0" prefHeight="30.0" prefWidth="200.0" promptText="N°  Télephone 2 " styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc">-->
+            <!--         <font>-->
+            <!--            <Font name="Times New Roman" size="14.0" />-->
+            <!--         </font>-->
+            <!--      </JFXTextField>-->
+            <!--      <Label fx:id="firstName_err" layoutX="30.0" layoutY="65.0" styleClass="labels_err" stylesheets="@../Style/style.css" text="1" textFill="#cc3300" visible="false">-->
+            <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <JFXComboBox fx:id="typeCmb" focusColor="#0077cc" labelFloat="true" layoutX="29.0" layoutY="130.0" prefHeight="30.0" prefWidth="200.0" promptText="نوع" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+        <!--<<<<<<< HEAD-->
+        <Label fx:id="typeErr" layoutX="30.0" layoutY="171.0" styleClass="labels_err" stylesheets="@../style/style.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="135.0">
+            <!--=======-->
+            <!--      <Label fx:id="phone1_err" layoutX="500.0" layoutY="65.0" styleClass="labels_err" stylesheets="@../Style/style.css" text="2" visible="false">-->
+            <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <JFXComboBox fx:id="moduleCmb" focusColor="#0077cc" labelFloat="true" layoutX="29.0" layoutY="230.0" prefHeight="30.0" prefWidth="200.0" promptText="المادة" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="180.0" />
+      <Label fx:id="moduleErr" layoutX="27.0" layoutY="250.0" styleClass="labels_err" stylesheets="@../style/style.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="215.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="levelCmb" focusColor="#0077cc" labelFloat="true" layoutX="29.0" layoutY="295.0" prefHeight="30.0" prefWidth="200.0" promptText="المستوى" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="260.0" />
+      <Label fx:id="levelErr" layoutX="27.0" layoutY="331.0" styleClass="labels_err" stylesheets="@../style/style.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+        <JFXTextField fx:id="price" focusColor="#0077cc" labelFloat="true" layoutX="29.0" layoutY="368.0" prefHeight="30.0" prefWidth="150.0" promptText="سعر العرض" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></JFXTextField>
+      <Label layoutX="172.0" layoutY="340.0" prefHeight="30.0" text="بالشهر" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceErr" layoutX="29.0" layoutY="402.0" styleClass="labels_err" stylesheets="@../style/style.css" visible="false" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="375.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+        <!--<<<<<<< HEAD-->
+        <JFXButton alignment="CENTER" layoutX="71.0" layoutY="435.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#add" prefHeight="30.0" prefWidth="120.0" styleClass="addbtn" stylesheets="@../style/buttons_style.css" text="إضافة" textFill="GHOSTWHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="450.0">
+            <!--=======-->
+            <!--      <Label fx:id="lastName_err" layoutX="30.0" layoutY="145.0" styleClass="labels_err" stylesheets="@../Style/style.css" text="3" visible="false">-->
+            <!--         <font>-->
+            <!--            <Font size="14.0" />-->
+            <!--         </font>-->
+            <!--      </Label>-->
+            <!--      <Label fx:id="phone2_err" layoutX="500.0" layoutY="145.0" styleClass="labels_err" stylesheets="@../Style/style.css" text="4" visible="false">-->
+            <!--         <font>-->
+            <!--            <Font size="14.0" />-->
+            <!--         </font>-->
+            <!--      </Label>-->
+            <!--      <JFXButton buttonType="RAISED" layoutX="300.0" layoutY="200.0" onAction="#add" prefHeight="27.0" prefWidth="120.0" styleClass="addbtn" stylesheets="@../Style/buttons_style.css" text="Ajouter">-->
+            <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="18" />
+         </graphic>
+        </JFXButton>
+        <!--<<<<<<< HEAD-->
+        <JFXButton fx:id="update" layoutX="70.0" layoutY="477.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#update" prefHeight="30.0" prefWidth="120.0" styleClass="upbtn" stylesheets="@../style/buttons_style.css" text="تعديل" textFill="GHOSTWHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="490.0">
+            <!--=======-->
+            <!--      <JFXButton fx:id="update" buttonType="RAISED" layoutX="450.0" layoutY="200.0" onAction="#update" prefWidth="120.0" styleClass="upbtn" stylesheets="@../Style/buttons_style.css" text="Modifier">-->
+            <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+         <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="18" />
+         </graphic>
+        </JFXButton>
+        <!--<<<<<<< HEAD-->
+        <JFXButton fx:id="delete" layoutX="70.0" layoutY="517.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#delete" prefHeight="30.0" prefWidth="120.0" styleClass="delbtn" stylesheets="@../style/buttons_style.css" text="حذف" textFill="GHOSTWHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="530.0">
+            <!--=======-->
+            <!--      <JFXButton fx:id="delete" buttonType="RAISED" layoutX="600.0" layoutY="200.0" onAction="#delete" prefWidth="120.0" styleClass="delbtn" stylesheets="@../style/buttons_style.css" text="Supprimer">-->
+            <!--&gt;>>>>>> 28fa90b4c34870dedb390330eecf3117addc63c5-->
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font>
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" size="18" />
+            </graphic>
+        </JFXButton>
+      <Label alignment="CENTER" layoutX="280.0" layoutY="30.0" prefHeight="30.0" prefWidth="510.0" styleClass="pantable" stylesheets="@../style/style.css" text="العروض" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+        <TableView fx:id="offerTable" layoutX="252.0" layoutY="108.0" onMouseClicked="#selectOffer" prefHeight="522.0" prefWidth="1050.0" stylesheets="@../style/Table_Gestion_Css.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+            <columns>
+                <TableColumn fx:id="nameC" prefWidth="180.0" text="إسم العرض" />
+                <TableColumn fx:id="TypeC" prefWidth="150.0" text="النوع" />
+            <TableColumn fx:id="ModuleC" prefWidth="150.0" text="المادة" />
+            <TableColumn fx:id="LevelC" prefWidth="150.0" text="المستوى" />
+            <TableColumn fx:id="PriceC" prefWidth="150.0" text="سعر العرض" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

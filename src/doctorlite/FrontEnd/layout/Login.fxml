@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="300.0" styleClass="back" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctorlite.BackEnd.Controller.LoginController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="CENTER" styleClass="navbar" text=" Hy Manager" textFill="WHITE">
+                            <font>
+                                <Font name="Times New Roman Bold" size="36.0" />
+                            </font>
+                            <graphic>
+                                <MaterialDesignIconView fill="WHITE" glyphName="VIEW_DASHBOARD" size="50" />
+                            </graphic>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="CENTER" styleClass="label1" text="مرحبا" textFill="WHITE">
+                            <font>
+                                <Font name="Times New Roman Bold" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="90.0" prefWidth="200.0">
+                    <children>
+                        <JFXTextField fx:id="username" alignment="CENTER_RIGHT" focusColor="#0077cc" labelFloat="true" prefHeight="35.0" prefWidth="200.0" promptText="اسم المستخدم" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc">
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font></JFXTextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="150.0" prefHeight="90.0" prefWidth="200.0">
+                    <children>
+<!--<<<<<<< HEAD
+                        <JFXPasswordField fx:id="password" focusColor="#0077cc" labelFloat="true" onAction="#login" prefHeight="35.0" prefWidth="200.0" promptText="Mot de passe" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc" />
+=======-->
+                        <JFXPasswordField fx:id="password" alignment="CENTER_RIGHT" focusColor="#0077cc" labelFloat="true" onAction="#login" prefHeight="35.0" prefWidth="200.0" promptText="كلمة المرور" styleClass="jfxtextfield" stylesheets="@../style/style.css" unFocusColor="#0099cc">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Times New Roman Bold" size="14.0" />
+                     </font></JFXPasswordField>
+                    </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="40.0" prefWidth="340.0">
+                    <children>
+                        <Label fx:id="error" alignment="CENTER" prefHeight="18.0" prefWidth="190.0" style="-fx-text-fill: #cc3300;" visible="false" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="170.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <JFXButton onAction="#login" prefHeight="40.0" prefWidth="200.0" styleClass="logbtn" stylesheets="@../style/buttons_style.css" text="تسجيل الدخول">
+                     <font>
+                        <Font name="Times New Roman" size="14.0" />
+                     </font></JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
