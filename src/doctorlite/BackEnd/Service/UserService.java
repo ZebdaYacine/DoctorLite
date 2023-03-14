@@ -110,6 +110,7 @@ public class UserService {
 
     public static User isauthentificated(User user) {
         String query = selctQuery(user, "userName");
+        System.err.println(query);
         User usr = new User();
         ObservableList<User> ListUsers = FXCollections.observableArrayList(new User());
         ListUsers.remove(0);

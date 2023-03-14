@@ -25,7 +25,8 @@ public class DataBaseConnection {
 
     public static Connection Connect() {
         try {
-            con = DriverManager.getConnection(url);
+            Class.forName("org.sqlite.JDBC");
+            con = DriverManager.getConnection(url,user,Password);
             System.out.println("Connection with Data Base");
         } catch (Exception e) {
             System.out.println(e.getMessage() + " " + e.getStackTrace());

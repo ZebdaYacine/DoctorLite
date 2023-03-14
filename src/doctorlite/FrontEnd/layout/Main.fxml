@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
@@ -8,97 +9,137 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1340.0" styleClass="back" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctorlite.BackEnd.Controller.MainController">
    <children>
-      <BorderPane fx:id="main" layoutY="55.0" onMouseDragged="#drag" onMousePressed="#press" prefHeight="650.0" prefWidth="1340.0" style="-fx-border-color: #0077cc transparent transparent transparent;" styleClass="home" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
-      <HBox alignment="TOP_CENTER" layoutX="394.0" prefHeight="60.0" prefWidth="698.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="321.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <JFXButton fx:id="presence" alignment="CENTER" contentDisplay="TOP" onAction="#presence" prefHeight="60.0" prefWidth="105.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="الدفع">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <graphic>
-                  <MaterialDesignIconView fx:id="" fill="WHITE" glyphName="CURRENCY_USD" size="24" />
-               </graphic>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </JFXButton>
-            <JFXButton fx:id="seance" alignment="CENTER" contentDisplay="TOP" onAction="#seance" prefHeight="60.0" prefWidth="105.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="الحصص">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <graphic>
-                  <MaterialDesignIconView fill="WHITE" glyphName="TIMETABLE" size="24" />
-               </graphic>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </JFXButton>
-            <JFXButton fx:id="groupes" alignment="CENTER" contentDisplay="TOP" layoutX="355.0" onAction="#groupes" prefHeight="60.0" prefWidth="105.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="الأفواج">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <graphic>
-                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE_OUTLINE" size="24" />
-               </graphic>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </JFXButton>
-            <JFXButton fx:id="offres" alignment="CENTER" contentDisplay="TOP" onAction="#offer" prefHeight="60.0" prefWidth="105.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="العروض">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <graphic>
-                  <MaterialDesignIconView fill="WHITE" glyphName="BANK" size="24" />
-               </graphic>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </JFXButton>
-         </children>
-      </HBox>
-      <Label layoutX="1038.0" nodeOrientation="RIGHT_TO_LEFT" text="Hy Manager" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
-         <font>
-            <Font name="Times New Roman" size="36.0" />
-         </font>
-         <graphic>
-            <MaterialDesignIconView fill="WHITE" glyphName="VIEW_DASHBOARD" size="50" />
-         </graphic>
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-      </Label>
-      <MenuBar layoutY="1.0" styleClass="menu-item" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="مساعدة">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#About" text="من طرف" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="الإعدادات">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#goToSetting" text="حفظ قاعدة البيانات" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="إدارة">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#goToSections" text="الأقسام" />
-                  <MenuItem mnemonicParsing="false" onAction="#goToRooms" text="القاعات" />
-                  <MenuItem mnemonicParsing="false" onAction="#goToStudent" text="التلاميذ" />
-                  <MenuItem mnemonicParsing="false" onAction="#goToTeacher" text="الأساتذة" />
-                  <MenuItem mnemonicParsing="false" onAction="#goToLevel" text="المستويات" />
-                  <MenuItem mnemonicParsing="false" onAction="#goToType" text="الأنواع" />
-                  <MenuItem fx:id="user" mnemonicParsing="false" onAction="#goToModule" text="المواد" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
+      <BorderPane fx:id="main" onMouseDragged="#drag" onMousePressed="#press" prefHeight="715.0" prefWidth="1340.0" style="-fx-border-color: #0077cc transparent transparent transparent;" styleClass="home" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox id="AnchorPane" prefHeight="715.0" prefWidth="263.0" styleClass="back" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="141.0" prefWidth="262.0" text="DoctorLite" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="36.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="VIEW_DASHBOARD" size="50" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+                  <MenuBar cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="205.0" styleClass="menu-item" stylesheets="@../style/style.css">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="مساعدة">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#About" text="من طرف" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="الإعدادات">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#goToSetting" text="حفظ قاعدة البيانات" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="إدارة">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#goToSections" text="الأقسام" />
+                              <MenuItem mnemonicParsing="false" onAction="#goToRooms" text="القاعات" />
+                              <MenuItem mnemonicParsing="false" onAction="#goToStudent" text="التلاميذ" />
+                              <MenuItem mnemonicParsing="false" onAction="#goToTeacher" text="الأساتذة" />
+                              <MenuItem mnemonicParsing="false" onAction="#goToLevel" text="المستويات" />
+                              <MenuItem mnemonicParsing="false" onAction="#goToType" text="الأنواع" />
+                              <MenuItem fx:id="user" mnemonicParsing="false" onAction="#goToModule" text="المواد" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </MenuBar>
+                  <Separator prefHeight="2.0" prefWidth="273.0" />
+                  <JFXButton fx:id="offres" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" graphicTextGap="20.0" lineSpacing="10.0" onAction="#offer" prefHeight="80.0" prefWidth="268.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="الإحصائيات" textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="presence1" alignment="CENTER" contentDisplay="RIGHT" onAction="#presence" prefHeight="80.0" prefWidth="271.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="الـمصالح">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOSPITAL_BUILDING" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="groupes" alignment="CENTER" contentDisplay="RIGHT" onAction="#groupes" prefHeight="80.0" prefWidth="263.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="الـمتابعة الطبية">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BED" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="seance" alignment="CENTER" contentDisplay="RIGHT" onAction="#seance" prefHeight="80.0" prefWidth="262.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="سجل الدخول">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ARROW_DOWN_BOLD_CIRCLE" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="presence" alignment="CENTER" contentDisplay="RIGHT" onAction="#presence" prefHeight="80.0" prefWidth="271.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="سجل الخروج">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ARROW_UP_BOLD_CIRCLE" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="presence2" alignment="CENTER" contentDisplay="RIGHT" onAction="#presence" prefHeight="80.0" prefWidth="263.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="تقارير الحالة النفسية">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="LIBRARY_BOOKS" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="presence21" alignment="CENTER" contentDisplay="RIGHT" onAction="#presence" prefHeight="80.0" prefWidth="263.0" styleClass="mainbtn" stylesheets="@../style/buttons_style.css" text="تسجيل الخروج">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="LOGIN" size="30" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </right></BorderPane>
    </children>
 </AnchorPane>
