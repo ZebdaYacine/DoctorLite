@@ -5,19 +5,21 @@
  */
 package doctorlite;
 
+import doctorlite.BackEnd.DataBaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
-import doctorlite.BackEnd.DataBaseConnection;
+
 
 /**
- *
  * @author Zed Yacine
  */
+
 public class DoctorLite extends Application {
+
 
     public static Stage loginStage = new Stage();
     public static Stage SecondStage = new Stage();
@@ -57,16 +59,18 @@ public class DoctorLite extends Application {
         loginStage.show();
     }
 
+
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         new Thread(() -> {
             DataBaseConnection.Connect();
         }).start();
         launch(args);
-
     }
+
 
 }

@@ -140,6 +140,7 @@
                   </JFXButton>
                </children>
             </VBox>
-         </right></BorderPane>
+         </right>
+      </BorderPane>
    </children>
 </AnchorPane>
